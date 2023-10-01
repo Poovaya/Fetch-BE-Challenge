@@ -86,7 +86,7 @@ We will be using **Postman** to make calls to the API.
 * Under the URL, select `Body` and  check the `raw` radio button and select `JSON` from the dropdown.
 * Enter a valid request body in the section below.
 * Click  `Send` and if the user has enough points, you'll receive a `Status: 200 OK` response in the body section below along with a list showing how many points were spend from each `payer`.
-* 
+  
 ### POST route "/spend" Errors
 * A `Status: 422 Unprocessable Entity` error response will occur if a request body is sent with the wrong format:
   * User doesn't have enough points to spend
