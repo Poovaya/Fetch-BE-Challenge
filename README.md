@@ -57,7 +57,7 @@ We will be using **Postman** to make calls to the API.
 * Once you're in a workspace, click on `Create a request` on the right under `Getting started`.
 * Let's start by adding some transactions
 
-## POST Route "/points" - Add Payer Transaction
+## POST Route "/add" - Add Payer Transaction
 ***REQUEST BODY FORMAT*** 
 ```
 {"payer": <str>, "points": <int>, "timestamp": <ISO8601>}
@@ -68,7 +68,7 @@ We will be using **Postman** to make calls to the API.
 * Enter a valid request body in the section below, which you can copy and paste from [points.json](points.json).
 * Click `Send` and you should receive a `Status: 200 OK` response in the body section below.
 
-### POST route "/points" Errors
+### POST route "/add" Errors
 * A `Status: 422 Unprocessable Entity` error response will occur if a request body is sent in the wrong format:
   * Negative points that would make a payers points go negative.
   * Adding 0 points
@@ -76,7 +76,7 @@ We will be using **Postman** to make calls to the API.
   * Additional parameters
   * Parameters with wrong type (e.g. timestamp not in ISO 8601 format)
 
-## POST route "/points/spend" - Spend User Points
+## POST route "/spend" - Spend User Points
 ***REQUEST BODY FORMAT***
 ```
 {"points": <str>}
@@ -87,7 +87,7 @@ We will be using **Postman** to make calls to the API.
 * Enter a valid request body in the section below.
 * Click  `Send` and if the user has enough points, you'll receive a `Status: 200 OK` response in the body section below along with a list showing how many points were spend from each `payer`.
 * 
-### POST route "/points/spend" Errors
+### POST route "/spend" Errors
 * A `Status: 422 Unprocessable Entity` error response will occur if a request body is sent with the wrong format:
   * User doesn't have enough points to spend
   * User spends 0 points
@@ -95,5 +95,5 @@ We will be using **Postman** to make calls to the API.
   * Additional parameters
   * Paramets with wrong type (e.g. points in string format)
 
-## GET route "/points" - Get Points Available Per Payer
+## GET route "/balance" - Get Points Available Per Payer
 * This route gives the user their remaining available `points` per `payer`.
