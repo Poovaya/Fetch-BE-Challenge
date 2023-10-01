@@ -63,7 +63,7 @@ We will be using **Postman** to make calls to the API.
 {"payer": <str>, "points": <int>, "timestamp": <ISO8601>}
 ```
 * Click the dropdown that says `GET` and select `POST`.
-* Enter the server port with the `/points` endpoint.
+* Enter the server port with the `/add` endpoint.
 * Under the URL, select `Body`, check the `raw` radio button, and select `JSON` from the dropdown.
 * Enter a valid request body in the section below, which you can copy and paste from [points.json](points.json).
 * Click `Send` and you should receive a `Status: 200 OK` response in the body section below.
@@ -82,7 +82,7 @@ We will be using **Postman** to make calls to the API.
 {"points": <str>}
 ```
 * Make sure the request type is set to `POST`.
-* Enter the server port with the `/points/spend` endpoint.
+* Enter the server port with the `/spend` endpoint.
 * Under the URL, select `Body` and  check the `raw` radio button and select `JSON` from the dropdown.
 * Enter a valid request body in the section below.
 * Click  `Send` and if the user has enough points, you'll receive a `Status: 200 OK` response in the body section below along with a list showing how many points were spend from each `payer`.
