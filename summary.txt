@@ -1,0 +1,11 @@
+1. Why did you choose the tools, libraries, and language you used for the coding exercise?
+I used Express and NodeJS for this project. I am already familiar with NodeJS and Express. I find it easy to use and quick to get started. NodeJS is 
+fast, scalable and has a vast package ecosystem. Express is minimalistic and lightweight and is quick and easy to create a small project with.
+
+2) What are the advantages and disadvantages of your solution?
+My solution is robust and validates and sanitizes inpts to prevent incorrect parameters from being passed in via requests.
+however, it requires a sort every time a user spends points. It also does not persist any data to disk.
+
+3)  What has been a favorite school/personal project thus far? What about it that challenged you?
+My favourite school project so far was designing and implementing a 4 staged RISC V processor.
+It was challenging to figure out  how data flows between the different stages and interact with previous stages during hazard detection.
